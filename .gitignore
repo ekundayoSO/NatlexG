@@ -1,5 +1,5 @@
 .gradle
 build
 .idea
-config.properties
+src/test/resources/config.properties
 build/
