@@ -1,5 +1,5 @@
 .gradle
 build
 .idea
-resources/config.properties
+config.properties
 build/
