@@ -2,4 +2,5 @@
 build
 .idea
 build/
-resources/config.properties
+resources/config.properties/
+src/test/resources/config.properties/
