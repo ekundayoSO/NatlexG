@@ -1,4 +1,4 @@
-package selenidetests;
+package remotetests.docker;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -16,19 +16,20 @@ public class LoginAndAddProductTest {
     public void loginAndAddProductToWishList() {
 
         Configuration.timeout = 20000;
+        Configuration.remote = "http://localhost:4444/wd/hub";
+
         open("https://mejuri.com/world/en#");
 
         String productNameToCheck = "Honey Mini Signet";
         LoginAndAddProductPage page = new LoginAndAddProductPage();
 
-        // Accept cookies
-        page.Cookies.click();
+
         // Login to the application
         page.LoginIcon.click();
         page.Email.setValue(utility.ConfigurationReader.getUsername());
         page.Password.setValue(utility.ConfigurationReader.getPassword());
         page.ContinueButton.click();
-        // Add Honey Mini to wish list
+        // Add Honey Mini Signet to wish list
         page.SearchIcon.shouldBe(Condition.visible).click();
         page.SearchBoxField.setValue("Honey Mini Signet").pressEnter();
         page.ProductName.click();
@@ -40,7 +41,7 @@ public class LoginAndAddProductTest {
         page.ElementToHover.hover();
         page.SignOut.click();
 
-        System.out.println("Oops!........................");
+        System.out.println("Running in docker container...............");
 
     }
 }

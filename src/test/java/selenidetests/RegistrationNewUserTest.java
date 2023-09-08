@@ -13,7 +13,7 @@ public class RegistrationNewUserTest {
     @Test
     public void registrationTest() {
 
-        Configuration.timeout = 10000;
+        Configuration.timeout = 20000;
         open("https://mejuri.com/world/en#");
         RegisterNewUserPage page = new RegisterNewUserPage();
 

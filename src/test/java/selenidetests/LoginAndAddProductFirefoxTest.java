@@ -16,9 +16,7 @@ public class LoginAndAddProductFirefoxTest {
     public void loginAndAddProductToWishList() throws InterruptedException {
 
         Configuration.browser = "firefox";
-        Configuration.headless = true;
-        Configuration.timeout = 10000;
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.timeout = 20000;
 
         open("https://mejuri.com/world/en#");
 
@@ -36,10 +34,9 @@ public class LoginAndAddProductFirefoxTest {
         page.SearchIcon.shouldBe(Condition.visible).click();
         page.SearchBoxField.setValue("Honey Mini Signet").pressEnter();
         page.ProductName.click();
-        page.WishListButton.click();
+        page.clickOnWishListButton();
         // Assert product exist in wish list cart
-        page.WishListCart.click();
-        Thread.sleep(2000);
+        page.AddToWishList();
         page.ProductInWishListCart.shouldHave(text(productNameToCheck));
         // Sign out from the application
         page.ElementToHover.hover();

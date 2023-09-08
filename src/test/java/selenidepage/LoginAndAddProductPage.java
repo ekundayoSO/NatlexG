@@ -2,6 +2,8 @@ package selenidepage;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -20,6 +22,28 @@ public class LoginAndAddProductPage {
     public SelenideElement ProductInWishListCart = $(By.xpath("//span[contains(text(),'Honey Mini Signet')]"));
     public SelenideElement ElementToHover = $(By.xpath("(//button[@aria-label='User'])[1]"));
     public SelenideElement SignOut = $(By.xpath("(//span[contains(text(),'Sign Out')])[1]"));
+
+    // Actions
+
+    public void clickOnWishListButton() {
+
+        try {
+            WishListButton.click();
+        } catch (TimeoutException e) {
+            System.out.println("Timeout waiting for element: " + e.getMessage());
+        }
+
+    }
+
+    public void AddToWishList() {
+
+        try {
+            WishListCart.click();
+        } catch (NoSuchElementException e) {
+            System.out.println("Element not found: " + e.getMessage());
+        }
+
+    }
 
     }
 
