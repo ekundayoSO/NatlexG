@@ -15,7 +15,6 @@ public class LoginAndAddProduct2Test {
     @Test
     public void loginAndAddProductToWishList() throws InterruptedException {
 
-        Configuration.browser = "";
         Configuration.timeout = 10000;
         Configuration.remote = "http://127.0.0.1:58785/wd/hub";
 

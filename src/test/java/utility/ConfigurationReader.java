@@ -5,14 +5,17 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
-    private static final String CONFIG_FILE = "src/test/resources/config.properties";
+    private static final String CONFIG_FILE = "src/test/java/utility/config.properties";
     public static String getUsername() {
+
         return getProperty("username");
     }
     public static String getFullName() {
+
         return getProperty("name");
     }
     public static String getPassword() {
+
         return getProperty("password");
     }
     private static String getProperty(String propertyName) {

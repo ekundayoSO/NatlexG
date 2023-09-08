@@ -3,8 +3,6 @@ package selenidetests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import selenidepage.LoginAndAddProductPage;
 
@@ -43,7 +41,7 @@ public class LoginAndAddProductTest {
         page.ElementToHover.hover();
         page.SignOut.click();
 
-        System.out.println("Free style testing........................");
+        System.out.println("Oops!........................");
 
     }
 }
