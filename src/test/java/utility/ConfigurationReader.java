@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
-    private static final String CONFIG_FILE = "src/test/java/utility/config.properties";
+    private static final String CONFIG_FILE = "src/main/java/config/properties.ini";
     public static String getUsername() {
 
         return getProperty("username");
