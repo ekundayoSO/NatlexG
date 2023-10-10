@@ -13,7 +13,7 @@ public class LoginAndAddProductEdgeTest {
 
     @Description("Login to the application and add product to wish list")
     @Test
-    public void loginAndAddProductToWishList() throws InterruptedException {
+    public void loginAndAddProductToWishList() {
 
         Configuration.browser = "edge";
         Configuration.timeout = 20000;
